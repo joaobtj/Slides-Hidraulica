@@ -3,7 +3,7 @@ title: "Hidráulica Agrícola"
 subtitle: "⚔<br/>S2"
 author: "Prof. João B. Tolentino Jr."
 institute: "UFSC Curitibanos"
-date: "2022/12/21 (updated: `r Sys.Date()`)"
+date: "2023 (atualizado em: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -14,3 +14,7 @@ output:
 ---
 
 # Hidráulica Agrícola
+
+---
+
+Por que estudar hidráulica na agricultura

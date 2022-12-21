@@ -1,0 +1,8 @@
+name: "Hidráulica Agrícola"
+navbar:
+  title: "Hidráulica Agrícola"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Introdução"
+      href: 01-intro.html

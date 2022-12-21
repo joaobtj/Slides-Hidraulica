@@ -1,4 +1,5 @@
 name: "Hidráulica Agrícola"
+output_dir: docs
 navbar:
   title: "Hidráulica Agrícola"
   left:

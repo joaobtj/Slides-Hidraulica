@@ -1,20 +1,53 @@
 ---
-title: "Hidráulica Agrícola"
-subtitle: "⚔<br/>S2"
-author: "Prof. João B. Tolentino Jr."
-institute: "UFSC Curitibanos"
-date: "2023 (atualizado em: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
+    seal: false
     lib_dir: libs
+    css: [default]
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+
 ---
+
+class: center, middle
+background-image: url(image/amarelo.png)
+background-size: 100% 100%
+```{css, echo = FALSE}
+body {
+  color: darkslateblue;
+}
+```
 
 # Hidráulica Agrícola
 
+
+
 ---
+layout: true
+background-image: url(image/branco.png)
+background-size: 100% 100%
+
+
+---
+# Introdução
+
+## verificar
+
+### o que é água
 
 Por que estudar hidráulica na agricultura
+
+
+<img src="http://bit.ly/wiki-toddy" width="15%" align="right" />
+
+
+
+---
+
+```{r out.width = "50%"}
+# url
+knitr::include_graphics("image/amarelo.png") 
+```
+---

@@ -1,4 +1,5 @@
 ---
+title: Hidráulica
 output:
   xaringan::moon_reader:
     seal: false
@@ -8,7 +9,10 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-
+---
+```{r setup}
+knitr::opts_chunk$set(fig.retina = 3, echo = FALSE, out.height = "150px")
+```
 ---
 
 class: center, middle
@@ -20,8 +24,11 @@ body {
 }
 ```
 
+
+
 # Hidráulica Agrícola
 
+## Introdução à Hidráulica
 
 
 ---
@@ -29,25 +36,104 @@ layout: true
 background-image: url(image/branco.png)
 background-size: 100% 100%
 
+---
+# Introdução à Hidráulica
+
+ A palavra Hidráulica vem do grego *condução de água*:
+ 
++ *hydor* - água
++ *aulos* - tubo, condução
+
+
+<img src="https://hidraulica.tolentino.pro.br/images/0-cover-dbx.jpg" width="50%" align="right" />
+
+--
+
+Atualmente o termo Hidráulica tem sentido mais amplo:
+
+> É o estudo do comportamento da água e de outros líquidos, quer em repouso, quer em movimento. 
+
+> Estuda as variáveis que agem sobre os líquidos, como a pressão e a vazão, denre outros.
 
 ---
-# Introdução
 
-## verificar
+# Introdução à Hidráulica
 
-### o que é água
+A Hidráulica pode ser dividida em
 
-Por que estudar hidráulica na agricultura
+* Hidráulica Geral
+  * Se aproxima da Mecânica dos Fluidos
+  * Trata do entendimento, predição e controle do comportamento dos fluidos
+  * Pode ser subdividida em:
+    * Hidrostática: fluidos em repouso (estática).
+    * Hidrodinâmica: fluidos em movimento (dinâmica).
 
+  
 
-<img src="http://bit.ly/wiki-toddy" width="15%" align="right" />
-
+--
+* Hidráulica Aplicada
+  * Surgiu da necessidade de resolver problemas práticos.
+  * Urbana: Sistemas de abastecimento de água, Sistemas de esgoto sanitário, Sistemas de drenagem pluvial.
+  * Predial: Indústrias, Comércio, Residências
+  * Rural: Sistema de drenagem, Sistema de irrigação
+  * Lazer e paisagismo
+  * Defesa contra inundações
+  * Geração de energia
+  * Navegação e obras marítimas e fluviais
 
 
 ---
 
-```{r out.width = "50%"}
-# url
-knitr::include_graphics("image/amarelo.png") 
+
+# História da Hidráulica
+
+
+.pull-left[
+Primeiras obras hidráulicas surgiram na Mesopotâmia e Babilônia
+
+```{r}
+knitr::include_graphics("image/mesopotamia.jpg")
 ```
+
+Primeiro sistema público de abastecimento de água: Aqueduto Jerwan, Assíria 691 a.C.
+
+```{r  }
+knitr::include_graphics("image/aqueduto-antigo.jpg")
+```
+
+]
+
+.pull-right[
+Grandes aquedutos romanos – 312 a.C.
+
+```{r}
+knitr::include_graphics("image/aqueduto-romano.jpg")
+```
+
+]
+
 ---
+
+# História da Hidráulica
+
+* Princípios da Hidrostática
+  * Arquimedes – 250 a.C.
+* Século XVI 
+  * da Vinci, Stevin, Galileu, Torricelli, Bernoulli, Euler, Venturi
+* Século XIX
+  * Reynolds, Prandtl, Froude
+
+```{r}
+knitr::include_graphics("image/arquimedes.jpg")
+```
+
+---
+
+# Atualmente...
+
+Uso de computadores permitiu a redução do tempo de cálculo
+
+Utilização de modelos de simulação de fenômenos dinâmicos
+
+![](image/gota.gif)
+

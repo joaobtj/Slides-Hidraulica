@@ -125,6 +125,283 @@ Utilização de modelos de simulação de fenômenos dinâmicos
 
 ![](image/gota.gif)
 
+
+---
+# Dimensões e Sistemas de Unidades
+
+.pull-left[
+* Dimensão: Variável física usada para especificar uma característica de um sistema
+  * Massa
+  * Comprimento
+  * Tempo
+
+
+
+* Unidade: Quantidade específica de uma dimensão física
+  * Algumas unidades de comprimento:
+     * Polegada
+     * Centímetro
+     * Pé
+     * Metro
+     * Milha
+     * Jarda 
+  ]
+.pull-right[
+  
+  ![](image/comprimento.jpg)
+]
+
+
+---
+# Sistema Internacional
+Conjunto sistematizado e padronizado de definições para unidades de medida, utilizado em quase todo o mundo moderno
+
+As unidades básicas são:
+* quilograma (kg-massa)
+* metro (m-comprimento) 
+* segundo (s-tempo). 
+
+---
+class: center, middle
+
+# Algumas unidades SI
+
+
+|        grandeza       |                 nome                 |     Símbolo     |       Derivação      |
+|:---------------------:|:------------------------------------:|:---------------:|:--------------------:|
+|     comprimento       |                metro                 |       m         |                      |
+|         área          |             metro quadrado           |        m&lt;sup&gt;2&lt;/sup&gt;       |                      |
+|        volume         |              metro cúbico            |        m&lt;sup&gt;3&lt;/sup&gt;       |                      |
+|        tempo          |               segundo                |       s         |                      |
+|      velocidade       |              metro   segundo         |     m s&lt;sup&gt;-1&lt;/sup&gt;     |                      |
+|      aceleração       |       metro por segundo quadrado     |     m s&lt;sup&gt;-2&lt;/sup&gt;     |                      |
+|        massa          |             quilograma               |       kg        |                      |
+|        vazão          |        metro cúbico por segundo      |       m&lt;sup&gt;3&lt;/sup&gt; s&lt;sup&gt;-1&lt;/sup&gt;      |                      |
+|        força          |               Newton                 |       N         |     1   kg m s&lt;sup&gt;-2&lt;/sup&gt;     |
+|       pressão         |               Pascal                 |       Pa        |       1   N m&lt;sup&gt;-2&lt;/sup&gt;      |
+|       trabalho        |                Joule                 |       J         |        1   N m       |
+|       potência        |                Watt                  |       W         |       1   J s&lt;sup&gt;-1&lt;/sup&gt;      |
+
+---
+
+# Prefixos do SI
+
+|    10&lt;sup&gt;n&lt;/sup&gt; |     Prefixo    |     Símbolo    |             Equivalente decimal            |
+|:-----------:|:--------------:|:--------------:|:------------------------------------------:|
+|     10&lt;sup&gt;24&lt;/sup&gt;    |      yotta     |        Y       |     1 000 000 000 000 000 000 000 000    |
+|     10&lt;sup&gt;21&lt;/sup&gt;    |      zetta     |        Z       |       1 000 000 000 000 000 000 000      |
+|     10&lt;sup&gt;18&lt;/sup&gt;    |       exa      |        E       |         1 000 000 000 000 000 000        |
+|     10&lt;sup&gt;15&lt;/sup&gt;    |       peta     |        P       |           1 000 000 000 000 000          |
+|     10&lt;sup&gt;12&lt;/sup&gt;    |       tera     |        T       |             1 000 000 000 000            |
+|      10&lt;sup&gt;9&lt;/sup&gt;    |       giga     |        G       |               1 000 000 000              |
+|      10&lt;sup&gt;6&lt;/sup&gt;    |       mega     |        M       |                 1 000 000                |
+|      10&lt;sup&gt;3&lt;/sup&gt;    |      quilo     |        k       |                   1 000                  |
+|      10&lt;sup&gt;2&lt;/sup&gt;    |      hecto     |        h       |                     100                    |
+|      10&lt;sup&gt;1&lt;/sup&gt;    |       deca     |        da      |                      10                    |
+
+
+---
+# Prefixos do SI
+
+|    10&lt;sup&gt;n&lt;/sup&gt;     |     Prefixo    |      Símbolo    |             Equivalente decimal            |
+|:------------:|:--------------:|:---------------:|:------------------------------------------:|
+|      10&lt;sup&gt;−1&lt;/sup&gt;    |       deci     |         d       |                     0,1                    |
+|      10&lt;sup&gt;−2&lt;/sup&gt;    |      centi     |         c       |                     0,01                   |
+|      10&lt;sup&gt;−3&lt;/sup&gt;    |       mili     |         m       |                    0,001                   |
+|      10&lt;sup&gt;−6&lt;/sup&gt;    |      micro     |     µ   (mu)    |                 0,000 001                |
+|      10&lt;sup&gt;−9&lt;/sup&gt;    |       nano     |         n       |               0,000 000 001              |
+|     10&lt;sup&gt;−12&lt;/sup&gt;    |       pico     |         p       |             0,000 000 000 001            |
+|     10&lt;sup&gt;−15&lt;/sup&gt;    |      femto     |         f       |           0,000 000 000 000 001          |
+|     10&lt;sup&gt;−18&lt;/sup&gt;    |       atto     |         a       |         0,000 000 000 000 000 001        |
+|     10&lt;sup&gt;−21&lt;/sup&gt;    |      zepto     |         z       |       0,000 000 000 000 000 000 001      |
+|     10&lt;sup&gt;−24&lt;/sup&gt;    |      yocto     |         y       |     0,000 000 000 000 000 000 000 001    |
+
+---
+
+# Conversão de Unidades
+
+Dois termos só podem ser equacionados se tiverem a mesma unidade. 
+
+Adição, subtração ou outra operação com dimensões só tem sentido quando suas dimensões forem  idênticas.
+
+---
+# Propriedades físicas dos fluidos
+
+Fluidos são substâncias ou corpos cujas moléculas tem a capacidade de se mover (fluir ou escoar).
+
+
+
+&lt;img src= https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGU3ZTFkNzQyMmI3NzIwNDVlNmQ4OGQ2MjNmOGZiZDI0NWE4NDhiNiZjdD1n/VehoU0h2Rl8Gc/giphy.gif  width="35%" align="right" /&gt;
+
+--
+
+Mais formalmente:
+
+Substâncias que se deformam continuamente quando sob a ação de uma tensão de cisalhamento
+
+&lt;img src="image/cisalha.jpg" height="150px" /&gt;
+
+Nossa atenção estará voltada especialmente para a água.
+
+---
+
+# Massa e peso
+
+* Massa – resistência a aceleração
+  * Quilograma (kg)
+* Peso – força atuante devido a gravidade
+  * Newton (N)
+  
+A segunda Lei de Newton estabelece
+
+.pull-left[
+
+`\(F = m \cdot a\)`
+
+* F – força
+* m – massa
+* a – aceleração
+]
+
+.pull-right[
+
+`\(w = m \cdot g\)`
+
+* w - peso
+*	m - massa
+* g – aceleração da gravidade 
+* g = 9,81 m s&lt;sup&gt;-2&lt;/sup&gt;
+]
+
+
+---
+
+# Massa específica e Peso específico
+
+.pull-left[
+* Massa específica: Massa por unidade de volume
+
+`\(\rho = \frac{m}{vol}\)`
+
+* Peso específico: Peso por unidade de volume
+
+`\(\gamma = \frac{w}{vol} = \frac{m \cdot g}{vol}\)`
+
+* Relação
+
+`\(\gamma = \rho \cdot g\)`]
+
+.pull-right[
+
+|     Fluido       |        ρ      |         γ     |
+|------------------|:-------------:|:-------------:|
+|                  |     kg m&lt;sup&gt;-3&lt;/sup&gt;    |      N m&lt;sup&gt;-3&lt;/sup&gt;    |
+|     Água 4ºC     |      1000     |      9810     |
+|     Água 25ºC    |       997     |      9780     |
+|     Ar 15ºC      |      1,23     |      12,1     |
+|     Mercúrio     |      13 600    |     133 416    |
+|     Etanol       |       788     |      7730     |
+]
+
+
+---
+
+# Densidade
+
+Razão entre a massa específica (ρ) do fluido e a massa especifica de uma substância padrão
+
+A água na temperatura de 4ºC é a substância padrão.
+
+`\(d = \frac{\rho_{substância}}{\rho_{água}}\)`
+
+|     Fluido         |        d       |
+|--------------------|:--------------:|
+|     Água   4ºC     |       1,0      |
+|     Água   25ºC    |      0,997     |
+|     Ar   15ºC      |     0,00123    |
+|     Água do mar    |      1,025     |
+|     Mercúrio       |       13,6     |
+|     Querosene      |      0,820     |
+|     Etanol         |      0,788     |
+|     Gasolina       |      0,720     |
+
+---
+
+# Exemplos
+
+1. Sabendo que certa substância possui 1500 kg de massa e ocupa um volume de 2 m&lt;sup&gt;3&lt;/sup&gt;, determine a massa específica, o peso específico e a densidade dessa substância.
+
+--
+
+2. Um reservatório cilíndrico possui diâmetro de base de 2 m e altura de 4 m. Se o reservatório está cheio de gasolina, determine a massa de gasolina presente no reservatório. Dado: ρ&lt;sub&gt;gasolina&lt;/sub&gt; = 720 kg m&lt;sup&gt;-3&lt;/sup&gt;.
+
+--
+
+3. A massa da coroa era de 980 g. O volume medido foi de 60,0 mL. Sabendo que a densidade do ouro é 19,3 diga se a coroa era realmente de ouro. 
+
+
+---
+
+# Viscosidade
+
+
+.pull-left[
+É a propriedade responsável pela resistência ao movimento do fluido. 
+
+* Fluidos "espessos" não escoam com facilidade: 
+  * Diesel, glicerina
+* Fluidos "finos" escoam com facilidade:
+  * Água, etanol
+  
+* μ – coeficiente de viscosidade dinâmica
+  * N s m &lt;sup&gt;-2
+
+* υ  - coeficiente de viscosidade cinemática
+  * m &lt;sup&gt;2&lt;/sup&gt; s &lt;sup&gt;-1
+  
+]
+
+
+.pull-right[
+
+É fortemente influenciada pela temperatura:
+
+|     Temperatura ºC    |     μ (N s m&lt;sup&gt;-2) 10&lt;sup&gt;-6    |     υ (m   s&lt;sup&gt;-1) 10&lt;sup&gt;-9    |
+|:---------------------:|:-----------------------:|:------------------------:|
+|            0          |           1791          |            1792          |
+|            2          |           1674          |            1673          |
+|            4          |           1566          |            1567          |
+|           10          |           1308          |            1308          |
+|           15          |           1144          |            1146          |
+|           20          |           1008          |            1007          |
+|           40          |            653          |            657           |
+|           60          |            469          |            478           |
+|           90          |            317          |            328           |
+|           100         |            284          |            296           |
+]
+
+
+---
+
+# Pressão de vapor
+
+Dependendo da pressão a que está submetido, um líquido entra em ebulição a determinada temperatura. 
+
+Variando a pressão varia também a temperatura de ebulição. 
+
+Esta propriedade é fundamental na análise do fenômeno da cavitação, pois quando um líquido inicia a ebulição inicia-se também a cavitação.
+
+|     Temperatura ºC    |     Pressão de vapor (kgf cm&lt;sup&gt;-2)    |     Temperatura ºC    |     Pressão de vapor (kgf cm&lt;sup&gt;-2)    |
+|:---------------------:|:----------------------------------:|:---------------------:|:----------------------------------:|
+|            1          |               0,00669              |           50          |                0,1258              |
+|            5          |               0,00889              |           60          |                0,2031              |
+|           10          |               0,01251              |           65          |                0,2550              |
+|           15          |               0,01737              |           70          |                0,3178              |
+|           20          |               0,02383              |           75          |                0,3931              |
+|           25          |               0,03229              |           80          |                0,4829              |
+|           35          |               0,05733              |           90          |                0,7194              |
+|           45          |               0,09771              |           100         |                1,0332              |
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

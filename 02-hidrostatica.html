@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Hidráulica</title>
+    <meta charset="utf-8" />
+    <script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+    <link href="site_libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+class: center, middle
+background-image: url(image/amarelo.png)
+background-size: 100% 100%
+&lt;style type="text/css"&gt;
+body {
+  color: darkslateblue;
+}
+&lt;/style&gt;
+
+
+
+# Hidráulica Agrícola
+
+## Hidrostática
+
+
+---
+layout: true
+background-image: url(image/branco.png)
+background-size: 100% 100%
+
+---
+# Pressão
+
+Relaciona uma força à unidade de área
+
+`\(P=\frac{F}{A}\)`
+
+
+Unidades: 	
+* Pascal (Pa) que equivale a uma força de 1 N sobre uma área de 1 m&lt;sup&gt;2&lt;/sup&gt; 
+* 1 Pa = 1 N m&lt;sup&gt;-2&lt;/sup&gt;
+* kgf m&lt;sup&gt;-2&lt;/sup&gt;, kgf cm&lt;sup&gt;-2&lt;/sup&gt;, bar, mca, mmHg
+
+
+---
+
+# Escala de pressão
+
+
+* Pressão absoluta
+
+Quando a pressão é expressa como sendo a diferença entre seu valor medido e o vácuo absoluto
+
+* Pressão relativa
+
+Quando a pressão é expressa como sendo a diferença entre seu valor medido e a pressão atmosférica local
+Também chamada pressão manométrica ou pressão efetiva
+
+P&lt;sub&gt;absoluta&lt;/sub&gt; = P&lt;sub&gt;relativa&lt;/sub&gt; + P&lt;sub&gt;atmosferica&lt;/sub&gt;
+
+
+---
+
+# O que causou isso?
+
+&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jRkFbij2MgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+# Pressão atmosférica
+
+Pressão atmosférica é a pressão exercida pela camada de moléculas de ar sobre a superfície.
+
+&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XqrrBuKfNWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+![](https://1.bp.blogspot.com/-5HzNGGbr8m8/XR_HtTvaneI/AAAAAAABGMA/-Eph0x4fCi8VschAssx7f9nn3Dqc7J2sACLcBGAs/s1600/earth_0.jpg)
+
+---
+
+# Pressão atmosférica
+
+
+.pull-left[
+A pressão atmosférica varia com a altitude
+
+`\(P_{atm} = 10,33 - 0,001 \cdot h\)`
+
+em que h = altitude, m
+
+]
+
+.pull-right[
+![](image/patm.jpg)
+]
+
+???
+
+
+--
+ A pressão atmosférica agindo igualmente em todos os pontos, muitas vezes não precisa ser considerada.
+
+---
+
+# Lei de Pascal
+
+Em qualquer ponto no interior de um líquido em repouso, a pressão é a mesma em todas as direções.
+
+Qualquer alteração na pressão aplicada a um pequeno volume de um fluido confinado e incompressível é transmitida integralmente a todos os pontos do fluido, bem como às paredes do recipiente que o mantém confinado. 
+
+---
+
+# Elevador Hidráulico
+
+.pull-left[
+![](image/elevador.jpg)
+]
+
+
+.pull-right[
+`\(F_2 = F_1 \cdot \frac{A_2}{A_1}\)`
+]
+
+---
+
+# Exemplo
+
+Qual a força resultante no êmbolo maior cujo diâmetro é de 75 cm se a força aplicada no embolo menor, cujo diâmetro é de 25 cm, for de 200 N?
+
+.pull-left[
+![](image/elevador.jpg)
+]
+
+--
+
+.pull-right[
+`\(F_2 = 200 \cdot \frac{75^2}{25^2} = 1800 N\)`
+]
+
+---
+
+# Lei de Stevin
+
+Princípio fundamental da Hidrostática
+
+
+&gt; A diferença de pressões entre dois pontos da massa de um líquido em equilíbrio é igual à diferença de profundidade multiplicada pelo peso específico do líquido.
+
+$$
+P_2 - P_1 = \gamma \cdot h
+$$
+
+![](image/stevin.jpg)
+
+---
+
+# Exemplo
+
+Qual a pressão na torneira, ao nível do mar, considerando a altura h=3,2 m? Descreva os efeitos da pressão atmosférica.
+
+![](image/stevin-exemplo.jpg)
+
+--
+
+Considerando um ponto A na superfície da água na caixa d’água e um ponto B na saída da torneira, em ambos atuando a pressão atmosférica:
+
+$$
+P_t = 9810 \cdot 3,2 = 31 392 Pa = 31,4 kPa 
+$$
+
+A pressão atmosférica atua em todos os pontos do sistema, anulando o seu efeito. Para uma diferença de cotas de 3,2 m, a diferença de pressão atmosférica é desprezível.
+
+
+---
+
+# Exemplo
+
+Seja o líquido azul água (γ=9810 N m&lt;sup&gt;-3&lt;/sup&gt;) e o líquido amarelo etanol (γ= 7730 N m&lt;sup&gt;-3&lt;/sup&gt;). 
+
+Calcule as pressões relativas que atuam em todos os pontos do sistema. 
+
+Dados: 
+
+* altura AB = 12,419 cm
+* altura BC = CD = 21,100 cm
+* altura DE = 15,761 cm
+
+![](image/stevin-exemplo2.jpg)
+
+???
+
+𝑃_𝐴=𝑃_𝑎𝑡𝑚=0 
+
+𝑃_𝐵=𝛾_𝑎𝑔𝑢𝑎.ℎ_𝐴𝐵=9810 . 0,12419=1218,3 𝑃𝑎 
+
+𝑃_𝐶=𝛾_𝑎𝑔𝑢𝑎.ℎ_𝐴𝐶=9810 . (0,12419+0,21100)=3288,2 𝑃𝑎 
+
+𝑃_𝐷=𝛾_𝑎𝑔𝑢𝑎.ℎ_𝐸𝐷=7730 . 0,15761=1218,3 𝑃𝑎 
+
+𝑃_𝐸=𝑃_𝑎𝑡𝑚=0 
+
+Os pontos B e D estão localizados a mesma altura e no mesmo fluido (água), logo, a pressão nestes dois pontos deve ser igual.
+
+
+---
+
+# Pressão em termos de altura de coluna de um fluido
+
+Forma conveniente de expressar a pressão
+A pressão se confunde com a profundidade
+
+$$
+h = \frac{P}{\gamma}
+$$
+
+* h - pressão em termos de altura de coluna de fluido, metros
+* P - pressão, N m&lt;sup&gt;-2
+* γ - peso específico, N m&lt;sup&gt;-3
+
+No caso da água, se denomina metro de coluna de água (mca)
+
+---
+
+# Medida das pressões
+
+Manometria – ação de medir pressões
+
+Manômetros – aparelhos que medem pressão
+
+* Piezômetros
+* Tubo em U
+* Manômetros diferenciais
+* Manômetros metálicos
+* Manômetros digitais
+
+---
+
+# Piezômetros
+
+.pull-left[
+![](https://hidraulica.tolentino.pro.br/images/3-piezometro.png)
+]
+
+
+.pull-right[
+Também chamado de tubo piezométrico, é um tubo transparente inserido na canalização.
+O líquido sobe até uma altura *h* dentro do piezômetro.
+
+]
+
+---
+
+# Tubo em U
+
+.pull-left[
+![](https://hidraulica.tolentino.pro.br/images/3-tubo-U.png)
+]
+
+.pull-right[
+Aplicado para medir pressões muito pequenas ou demasiadamente grandes para os piezômetros.
+
+Utiliza em líquido manométrico:
+* Pequenas pressões: água, tetracloreto de carbono, tetrabrometo de acetileno e benzina 
+* Grandes pressões: mercúrio
+
+]
+
+$$
+P = \gamma ' \cdot h - \gamma \cdot z
+$$
+
+ou
+
+$$
+P = d ' \cdot h - d \cdot z
+$$
+
+---
+
+# Exemplo
+
+Calcular a pressão em "m", quando o fluido A for água, o fluido B tetracloreto de carbono (d=1,5), e as alturas z=559 mm e y=300 mm.
+
+
+.pull-left[
+![](image/tubou-exemplo.jpg)
+]
+
+
+???
+𝑃_𝑚+0,3 . 1,0=0,559 . 1,5=0,5385 𝑚𝑐𝑎
+
+---
+# Exemplo
+
+Determine a pressão no ponto A quando h&lt;sub&gt;1&lt;/sub&gt; = 20 cm e h&lt;sub&gt;2&lt;/sub&gt; = 60 cm. O líquido manométrico é o mercúrio (ρ = 13600 kg m&lt;sup&gt;-3&lt;/sup&gt;). 
+
+
+???
+𝑃_𝐴+0,2 . 1=0,6 . 13,6
+𝑃_𝐴=7,96 𝑚𝑐𝑎  
+
+---
+
+# Manômetro diferencial
+
+
+.pull-left[
+Para determinação da diferença de pressão, empregam se manômetro diferenciais
+
+![](https://hidraulica.tolentino.pro.br/images/3-diferencial.png)
+
+]
+
+
+
+.pull-rigth[
+
+`\(P_2 - P_1 = \Delta P = h \cdot \gamma ' - h \cdot \gamma\)`
+
+`\(P_2 - P_1 = \Delta P = h \cdot d ' - h \cdot d\)`
+]
+
+
+---
+
+# Exemplo
+
+Determinar a diferença de pressão entre dois pontos A e B distantes entre si 50 cm sendo a altura h&lt;sub&gt;2&lt;/sub&gt;=33 cm e o líquido manométrico mercúrio.
+
+.pull-left[
+
+![](image/diferencial-exemplo.jpg)
+]
+
+???
+Δ𝑃= (13,6−1)  .  0,33
+Δ𝑃 =4,15 𝑚𝑐𝑎
+
+---
+
+# Manômetros metálicos e digitais
+
+Atualmente, são os mais utilizados na agricultura para medir as pressões manométricas, tanto positivas quanto negativas.
+
+São instalados diretamente no ponto em que se deseja efetuar a leitura da pressão.
+
+.pull-left[
+![](https://upload.wikimedia.org/wikipedia/commons/7/74/MAXIMATOR-High-Pressure-Manometer-01a.jpg)
+]
+
+
+.pull-right[
+![](https://www.wika.com.br/upload/WIKA_Thumbnails/Product-Detail-Large/PIC_PR_CPG1500_de_de_72194.jpg.png)
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

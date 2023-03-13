@@ -4,5 +4,3 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Introdução"
-      href: 01-intro.html

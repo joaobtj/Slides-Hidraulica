@@ -1,3 +1,10 @@
-# Sumário
+---
+title: Hidráulica
+---
 
-[Introdução](01-intro.html)
+
+## Sumário
+
+[Introdução](01-intro.html){target="_blank"}
+
+[Hidrostática](02-hidrostatica.html){target="_blank"}

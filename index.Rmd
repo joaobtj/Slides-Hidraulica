@@ -3,8 +3,17 @@ title: Hidráulica
 ---
 
 
-## Sumário
+Slides das aulas de Hidráulica ABF-7117
 
-[Introdução](01-intro.html){target="_blank"}
+Prof. Dr. João Batista Tolentino Júnior
 
-[Hidrostática](02-hidrostatica.html){target="_blank"}
+UFSC - Campus de Curitibanos
+
+
+[1 - Introdução](01-intro.html){target="_blank"}
+
+[2 - Hidrostática](02-hidrostatica.html){target="_blank"}
+
+[3 - Hidrodinãmica](03-hidrodinamica.html){target="_blank"}
+
+

@@ -14,6 +14,6 @@ UFSC - Campus de Curitibanos
 
 [2 - Hidrostática](02-hidrostatica.html){target="_blank"}
 
-[3 - Hidrodinãmica](03-hidrodinamica.html){target="_blank"}
+[3 - Hidrodinâmica](03-hidrodinamica.html){target="_blank"}
 
 

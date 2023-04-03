@@ -178,6 +178,103 @@ Sendo a altura h=3 m, qual a vazão na mangueira? (diâmetro = 20 mm)
 
 ---
 
+# Aplicações práticas do teorema de Bernoulli
+
+## Tubo de Venturi
+
+## Tubo de Pitot
+
+---
+
+# Tubo de Venturi
+
+Consiste de seção convergente gradual, seguida de um estrangulamento (garganta) e de uma seção divergente gradual. 
+
+&lt;img src="https://hidraulica.tolentino.pro.br/images/4-venturi.png" height="150px" /&gt;
+
+No estrangulamento, observa-se uma diminuição da pressão devido ao aumento da velocidade.
+
+---
+# Tubo de Venturi
+
+Aplicações:
+
+* carburadores de carro
+* aerógrafos para pintura
+* injetor de fertilizantes
+* medido de vazão em tubulações
+
+---
+
+# Tubo de Venturi como medidor de vazão
+
+&lt;img src="https://hidraulica.tolentino.pro.br/images/4-venturi-vazao.png" height="150px" /&gt;
+
+$$
+Q = \frac{\pi \cdot D_1^2}{4} \cdot \sqrt{\frac{2 \cdot g \cdot \Delta P}{(\frac{D_1}{D_2})^4-1}}
+$$
+
+---
+
+# Exemplo
+
+Qual a vazão que escoa por uma tubulação de 50 mm de diâmetro em que está instalado um Venturi com 25 mm no estrangulamento. O sistema está ligado a um manômetro diferencial de mercúrio, cuja deflexão na coluna de mercúrio é de 45 cm.
+
+???
+
+DP = (13,6-1) * 0,45 = 5,67 mca
+
+Q = pi * 0,050^2/4 * raiz 19,62*5,67 / (0,050/0,025)^4-1 = 0,00537 m3/s = 5,37 L/s
+
+---
+
+# Tubo de Pitot
+
+Consiste de dois tubos concêntricos de pequeno diâmetro. O tubo interno mede a energia total de escoamento, enquanto que o tubo externo mede unicamente a energia de pressão estática. A diferença entre o tubo interno e externo corresponde à carga cinética, ou seja, a energia de velocidade.
+
+&lt;img src="https://hidraulica.tolentino.pro.br/images/4_pitot.png" height="150px" /&gt;
+
+Quando um tubo de Pitot é ligado a um manômetro diferencial, a velocidade da água escoando é calculada pela Equação
+
+$$
+V = \sqrt{2 \cdot g \cdot h \cdot (D_{man}-D_{agua})}
+$$
+
+---
+
+# Tubo de Pitot
+
+Tubos de Pitot são utilizados na aviação para medir a altitude e velocidade no ar dos aviões. Equipam desde pequenos monomotores até grandes jatos
+
+&lt;div class="figure"&gt;
+&lt;img src="https://hidraulica.tolentino.pro.br/images/4_pitot_aviao.png" alt="Tubo de Pitot em aviões: Cessna 172 Skyhawk II (acima) e Boeing 777-381 (abaixo)" height="350px" /&gt;
+&lt;p class="caption"&gt;Tubo de Pitot em aviões: Cessna 172 Skyhawk II (acima) e Boeing 777-381 (abaixo)&lt;/p&gt;
+&lt;/div&gt;
+
+---
+class: middle
+background-image: url(https://img.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-63749.jpg?w=2000
+background-size: 100% 100%
+
+
+# O voo Air France 447
+
+Em 31 de maio de 2009, o voo 447 da Air France que fazia a rota Rio de Janeiro - Paris caiu no Ocenao Atlântico com 228 pessoas a bordo. 
+
+O relatório final da investigação do acidente apontou que a tragédia foi causada por uma combinação de erros de avaliação dos pilotos devido a problemas técnicos ocorridos por congelamento nos sensores de velocidade (tubo de Pitot). Segundo o relatório as sondas Pitot, obstruídas por cristais de gelo, não conseguiram informar a velocidade correta da aeronave, o que causou a desconexão do piloto automático e em seguida diversos erros de avaliação dos pilotos.
+
+---
+
+# Exemplo
+
+Um tubo de Pitot foi instalado no centro de uma tubulação de 200 mm de diâmetro que está conduzindo água. Se a deflexão da coluna de mercúrio é de 264 mm, calcular a vazão conduzida pela tubulação.
+
+???
+V = raiz( 19,62 * 0,264 * 13,6-1) = 8,08 m/s
+Q = pi D^2/4*V = 0,25 m3?s = 250 L/s
+---
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

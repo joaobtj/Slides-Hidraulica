@@ -1,0 +1,173 @@
+---
+title: Hidráulica
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    css: [default]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.retina = 3, echo = FALSE, out.height = "150px")
+```
+
+class: center, middle
+background-image: url(image/amarelo.png)
+background-size: 100% 100%
+```{css, echo = FALSE}
+body {
+  color: darkslateblue;
+}
+```
+
+
+
+# Hidráulica Agrícola
+
+## Perda de Carga Contínua
+
+
+---
+layout: true
+background-image: url(image/branco.png)
+background-size: 100% 100%
+
+---
+
+
+# Perda de Carga Contínua
+
+Poucos problemas mereceram tanta atenção ou foram tão investigados quanto o da determinação das perdas de carga em uma tubulação. Inúmeras experiências mostraram que a resistência ao escoamento é:
+
+* Proporcional ao comprimento (L) da canalização
+* Inversamente proporcional ao diâmetro (1/D)
+* Proporcional a uma potência da velocidade (v<sup>n</sup>)
+* Variável com a natureza dos tubos (rugosidade)
+* Independente da posição dos tubos
+* Independente da pressão interna
+
+---
+
+# Fórmula Universal
+
+$$
+hf = f \cdot \frac{L}{D} \cdot \frac{V^2}{2 \cdot g}
+$$
+
+ou, combinando com a equação da vazão:
+
+$$
+hf = f \cdot \frac{8}{\pi^2 \cdot g} \cdot \frac{Q^2 \cdot L}{D^5}
+$$
+
+---
+
+# Fator de atrito f
+
+## Regime laminar
+
+$$
+f = \frac{64}{Re}
+$$
+
+## Regime turbulento
+
+$$
+\frac{1}{\sqrt{f}} = -2 \cdot log \left ( \frac{e}{3,7 \cdot D} + \frac{2,51}{Re \cdot \sqrt{f}} \right )
+$$
+
+Essa é a equação de Colebrook-White (1939), válida para qualquer faixa do regime turbulento. Seu inconveniente é precisar de métodos iterativos para calcular o valor de f.
+
+---
+
+# Fórmula de Hazen-Willians
+
+Em unidades do SI, a fórmula de Hazen-Willians para a perda de carga pode ser descrita da seguinte forma:
+
+$$
+hf = \frac{10,643 \cdot Q^{1,852} \cdot L}{C^{1,852} \cdot D^{4,871}}
+$$
+
+em que:
+
+* hf – perda de carga, m
+* Q – vazão, m^3^/s
+* L - comprimento, m
+* C – coeficiente de atrito de Hazen-Willians, adimensional
+* D – diâmetro, m
+
+
+Como toda fórmula empírica, ela só pode ser usada para os casos em que foi deduzida, são eles:
+
+*	Água a temperatura ambiente, cerca de 20°C
+*	Regime turbulento
+*	Diâmetro entre 50 e 3500 mm
+
+---
+
+A tabela abaixo apresenta o valor do coeficiente de atrito de Hazen-Willian para alguns materiais:
+
+|     Material    | Coeficiente C |
+|:---------------:|:-------------:|
+|  Aço corrugado  |       60      |
+| Aço galvanizado |      125      |
+|      Cobre      |      140      |
+|     Concreto    |      130      |
+|      Ferro      |      130      |
+|     Plástico    |      140      |
+
+---
+
+# Exemplos
+
+Uma adutora constituída por tubos de PVC (C=140) de 150 mm deverá fornecer 25 L/s de água a uma propriedade agrícola. Se o comprimento da adutora é de 1000 m, determinar o desnível (hf) necessário à obtenção desta vazão.
+
+???
+
+$hf = \frac{10,643 \cdot 0,025^{1,852} \cdot 1000}{140^{1,852} \cdot 0,150^{4,871}} = 12,55 mca$
+
+--
+
+Calcular a vazão fornecida por uma adutora construída com 3200 m de tubos de PVC (C=140) com diâmetro de 200 mm. A adutora é alimentada por um reservatório, cujo nível está situado na cota 140 m descarregando em outro reservatório cujo nível de água se situa na cota 92 m. 
+
+???
+
+$Q = \left ( \frac{hf \cdot C^{1,852} \cdot D^{4,871}}{10,643 \cdot L} \right )^{\frac{1}{1,852}}$
+  
+$Q = \left ( \frac{48 \cdot 140^{1,852} \cdot 0,200^{4,871}}{10,643 \cdot 3200} \right )^{\frac{1}{1,852}} = 0,059 m^3/s$
+
+--
+
+Dois reservatórios, cujos níveis de água estão situados nas cotas 195 m e 100 m, estão interligados por meio de uma tubulação de PVC (C=140) de 975 m de comprimento que conduz uma vazão de 5 L/s. Calcular o diâmetro interno dos tubos da adutora de interligação.
+
+???
+
+$D = \left ( \frac{10,643 \cdot Q^{1,852} \cdot L}{hf \cdot C^{1,852}} \right ) ^ {\frac{1}{4,871}}$
+  
+ 
+$D = \left ( \frac{10,643 \cdot 0,005^{1,852} \cdot 975}{95  \cdot 140^{1,852}} \right ) ^ {\frac{1}{4,871}} \cdot 1000 = 53,4 mm$
+
+
+---
+
+# Fórmula de Flamant
+
+Aplica-se ao caso em que a fórmula de Hazen-Willians não deve ser utilizada, principalmente para diâmetros menores de 50 mm.
+
+$$
+hf = \frac{6,107 \cdot b \cdot Q^{1,75} \cdot L} {D^{4,75}}
+ 
+$$
+
+Abaixo alguns valores para o coeficiente de rugosidade "b" de Flamant:
+
+|           Material          |     Coeficiente b |
+|:---------------------------:|:-----------------:|
+|      Ferro fundido novo     |      0,000185     |
+|     Aço galvanizado novo    |      0,000185     |
+|        Cimento amianto      |      0,000155     |
+|             Plástico        |      0,000135     |
+

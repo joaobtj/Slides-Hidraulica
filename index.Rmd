@@ -17,3 +17,10 @@ UFSC - Campus de Curitibanos
 [3 - Hidrodinâmica](03-hidrodinamica.html){target="_blank"}
 
 [4 - Condutos livres](04-livre.html){target="_blank"}
+
+[5 - Escoamento em orifícios](){target="_blank"}
+
+[6 - Regimes de escoamento](06-regime.html){target="_blank"}
+
+[7 - Perda de carga contínua](07-hf_cont.html){target="_blank"}
+

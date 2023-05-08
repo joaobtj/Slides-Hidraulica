@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Hidráulica</title>
+    <meta charset="utf-8" />
+    <script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+    <link href="site_libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+class: center, middle
+background-image: url(image/amarelo.png)
+background-size: 100% 100%
+&lt;style type="text/css"&gt;
+body {
+  color: darkslateblue;
+}
+&lt;/style&gt;
+
+
+
+# Hidráulica Agrícola
+
+## Perda de Carga Contínua
+
+
+---
+layout: true
+background-image: url(image/branco.png)
+background-size: 100% 100%
+
+---
+
+
+# Perda de Carga Contínua
+
+Poucos problemas mereceram tanta atenção ou foram tão investigados quanto o da determinação das perdas de carga em uma tubulação. Inúmeras experiências mostraram que a resistência ao escoamento é:
+
+* Proporcional ao comprimento (L) da canalização
+* Inversamente proporcional ao diâmetro (1/D)
+* Proporcional a uma potência da velocidade (v&lt;sup&gt;n&lt;/sup&gt;)
+* Variável com a natureza dos tubos (rugosidade)
+* Independente da posição dos tubos
+* Independente da pressão interna
+
+---
+
+# Fórmula Universal
+
+$$
+hf = f \cdot \frac{L}{D} \cdot \frac{V^2}{2 \cdot g}
+$$
+
+ou, combinando com a equação da vazão:
+
+$$
+hf = f \cdot \frac{8}{\pi^2 \cdot g} \cdot \frac{Q^2 \cdot L}{D^5}
+$$
+
+---
+
+# Fator de atrito f
+
+## Regime laminar
+
+$$
+f = \frac{64}{Re}
+$$
+
+## Regime turbulento
+
+$$
+\frac{1}{\sqrt{f}} = -2 \cdot log \left ( \frac{e}{3,7 \cdot D} + \frac{2,51}{Re \cdot \sqrt{f}} \right )
+$$
+
+Essa é a equação de Colebrook-White (1939), válida para qualquer faixa do regime turbulento. Seu inconveniente é precisar de métodos iterativos para calcular o valor de f.
+
+---
+
+# Fórmula de Hazen-Willians
+
+Em unidades do SI, a fórmula de Hazen-Willians para a perda de carga pode ser descrita da seguinte forma:
+
+$$
+hf = \frac{10,643 \cdot Q^{1,852} \cdot L}{C^{1,852} \cdot D^{4,871}}
+$$
+
+em que:
+
+* hf – perda de carga, m
+* Q – vazão, m^3^/s
+* L - comprimento, m
+* C – coeficiente de atrito de Hazen-Willians, adimensional
+* D – diâmetro, m
+
+
+Como toda fórmula empírica, ela só pode ser usada para os casos em que foi deduzida, são eles:
+
+*	Água a temperatura ambiente, cerca de 20°C
+*	Regime turbulento
+*	Diâmetro entre 50 e 3500 mm
+
+---
+
+A tabela abaixo apresenta o valor do coeficiente de atrito de Hazen-Willian para alguns materiais:
+
+|     Material    | Coeficiente C |
+|:---------------:|:-------------:|
+|  Aço corrugado  |       60      |
+| Aço galvanizado |      125      |
+|      Cobre      |      140      |
+|     Concreto    |      130      |
+|      Ferro      |      130      |
+|     Plástico    |      140      |
+
+---
+
+# Exemplos
+
+Uma adutora constituída por tubos de PVC (C=140) de 150 mm deverá fornecer 25 L/s de água a uma propriedade agrícola. Se o comprimento da adutora é de 1000 m, determinar o desnível (hf) necessário à obtenção desta vazão.
+
+???
+
+`\(hf = \frac{10,643 \cdot 0,025^{1,852} \cdot 1000}{140^{1,852} \cdot 0,150^{4,871}} = 12,55 mca\)`
+
+--
+
+Calcular a vazão fornecida por uma adutora construída com 3200 m de tubos de PVC (C=140) com diâmetro de 200 mm. A adutora é alimentada por um reservatório, cujo nível está situado na cota 140 m descarregando em outro reservatório cujo nível de água se situa na cota 92 m. 
+
+???
+
+`\(Q = \left ( \frac{hf \cdot C^{1,852} \cdot D^{4,871}}{10,643 \cdot L} \right )^{\frac{1}{1,852}}\)`
+  
+`\(Q = \left ( \frac{48 \cdot 140^{1,852} \cdot 0,200^{4,871}}{10,643 \cdot 3200} \right )^{\frac{1}{1,852}} = 0,059 m^3/s\)`
+
+--
+
+Dois reservatórios, cujos níveis de água estão situados nas cotas 195 m e 100 m, estão interligados por meio de uma tubulação de PVC (C=140) de 975 m de comprimento que conduz uma vazão de 5 L/s. Calcular o diâmetro interno dos tubos da adutora de interligação.
+
+???
+
+`\(D = \left ( \frac{10,643 \cdot Q^{1,852} \cdot L}{hf \cdot C^{1,852}} \right ) ^ {\frac{1}{4,871}}\)`
+  
+ 
+`\(D = \left ( \frac{10,643 \cdot 0,005^{1,852} \cdot 975}{95  \cdot 140^{1,852}} \right ) ^ {\frac{1}{4,871}} \cdot 1000 = 53,4 mm\)`
+
+
+---
+
+# Fórmula de Flamant
+
+Aplica-se ao caso em que a fórmula de Hazen-Willians não deve ser utilizada, principalmente para diâmetros menores de 50 mm.
+
+$$
+hf = \frac{6,107 \cdot b \cdot Q^{1,75} \cdot L} {D^{4,75}}
+ 
+$$
+
+Abaixo alguns valores para o coeficiente de rugosidade "b" de Flamant:
+
+|           Material          |     Coeficiente b |
+|:---------------------------:|:-----------------:|
+|      Ferro fundido novo     |      0,000185     |
+|     Aço galvanizado novo    |      0,000185     |
+|        Cimento amianto      |      0,000155     |
+|             Plástico        |      0,000135     |
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

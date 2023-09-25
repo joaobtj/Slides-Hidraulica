@@ -94,7 +94,7 @@ $$
 em que:
 
 * hf – perda de carga, m
-* Q – vazão, m^3^/s
+* Q – vazão, m<sup>3</sup>/s
 * L - comprimento, m
 * C – coeficiente de atrito de Hazen-Willians, adimensional
 * D – diâmetro, m
@@ -159,7 +159,6 @@ Aplica-se ao caso em que a fórmula de Hazen-Willians não deve ser utilizada, p
 
 $$
 hf = \frac{6,107 \cdot b \cdot Q^{1,75} \cdot L} {D^{4,75}}
- 
 $$
 
 Abaixo alguns valores para o coeficiente de rugosidade "b" de Flamant:

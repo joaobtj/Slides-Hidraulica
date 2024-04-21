@@ -1,0 +1,247 @@
+---
+title: Hidráulica
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    css: [default]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.retina = 3, echo = FALSE, out.height = "150px")
+```
+
+class: center, middle
+background-image: url(image/amarelo.png)
+background-size: 100% 100%
+```{css, echo = FALSE}
+body {
+  color: darkslateblue;
+}
+```
+
+
+
+# Hidráulica Agrícola
+
+## Escoamento em orifícios
+
+
+---
+layout: true
+background-image: url(image/branco.png)
+background-size: 100% 100%
+
+---
+
+
+# Orifícios
+
+Orifícios são perfurações de forma geométrica bem definida feitos abaixo da superfície livre do líquido em paredes de reservatórios.
+
+```{r}
+#| echo: false
+#| out.width: 40%
+#| out.height: 40%
+
+knitr::include_graphics("https://hidraulica.tolentino.pro.br/images/5_orificio.png")
+```
+
+
+
+
+---
+
+# Orifícios
+
+Podem ser classificados quanto à dimensão relativa:
+
+* Pequenos: menores que 1/10 da profundidade.
+* Grandes: maiores que 1/10 da profundidade.
+
+No caso de orifícios pequenos, podemos admitir sem grande erros, que todas as partículas atravessam o orifício com a mesma velocidade, ou seja, a velocidade na parte superior e inferior são aproximadamente iguais.
+
+---
+
+# Coeficiente de descarga
+
+O jato de água que sai de um orifício ou bocal chama-se veia líquida.
+
+*Coeficiente de contração (Cc)*: os filetes líquidos continuam a convergir depois de passarem pelo orifício até uma seção contraída menor que a área do orifício.
+
+*Coeficiente de redução de velocidade (Cv)*: leva em conta as perdas existente, de modo que a velocidade real é sempre menor que a velocidade teórica.
+
+*Coefiente de descarga (Cd)*: produto dos coeficentes de contração e redução da velocidade:
+
+$$
+C_d = C_c \cdot C_v
+$$
+
+
+---
+
+# Teorema de Torricelli
+
+Aplicando o teorema de Bernoulli ao fluxo através de um pequeno orifício e tomando-se o eixo do orifício como referência: 
+
+--
+
+$$
+V = \sqrt{2 \cdot g \cdot h}
+$$
+
+Aplicando o Coeficiente de redução de velocidade (Cv):
+
+$$
+V = C_v \cdot \sqrt{2 \cdot g \cdot h}
+$$
+---
+
+# Orifícios pequenos em paredes delgadas
+
+Em seu escoamento, podemos considerar que todas as partículas do fluido atravessam o orifício com a mesma velocidade.
+
+$C_v = 0,985$
+
+$C_c = 0,62$
+
+$C_d = 0,61$
+
+A equação da vazão fica:
+
+$$
+Q = C_d \cdot A \cdot \sqrt{2 \cdot g \cdot h}
+$$
+
+---
+
+# Exemplo
+
+Um orifício em parede delgada com 10 cm de diâmetro está instalado na parede de um grande reservatório. A altura da água acima do centro do orifício é de 5 m. Qual a velocidade média da água e a vazão do orifício?
+
+???
+
+Pela equação \@ref(eq:tor2):
+  
+$V = 0,985 \cdot \sqrt{19,62 \cdot 5} = 9,76 m/s$
+  
+Pela equação \@ref(eq:orif-pq):
+  
+$Q = 0,61 \cdot \frac{\pi \cdot 0,10^2} {4} \sqrt{19,62 \cdot 5} = 45,5 L/s$
+
+---
+
+# Orifício de grandes dimensões
+
+Neste caso, não podemos admitir que todas as partículas possuem a mesma velocidade.
+
+A diferença na carga hidráulica em toda a área do orifício não pode ser desprezada. 
+
+```{r}
+#| echo: false
+#| out.width: 40%
+#| out.height: 40%
+
+knitr::include_graphics("https://hidraulica.tolentino.pro.br/images/5_orificio_grande.png")
+```
+
+
+
+
+--
+.pull-left[
+Logo, devemos usar a integral da equação em função da altura “h”.
+
+$$
+Q = \frac{2}{3} \cdot Cd \cdot L \cdot \sqrt{2 \cdot g} \cdot (h_2^{3/2} - h_1^{3/2})
+$$]
+
+
+.pull-right[
+em que:
+
+* L é a largura do orifício.
+* h1 é altura da água acima da base superior do orifício.
+* h2 é altura da água acima da base inferior do orifício.]
+---
+
+# Exemplo
+
+Um orifício retangular com 60 cm de altura e 75 cm de largura está instalado em um grande reservatório. A altura da água acima do centro do orifício é de 50 cm. Qual a vazão do orifício?
+
+???
+
+$Q = \frac{2}{3} \cdot 0,61 \cdot 0,75 \cdot \sqrt{19,62} \cdot (0,8^{3/2} - 0,2^{3/2}) = 0,85 m^3/s$
+
+---
+
+# Bocais
+
+.pull-left[Bocais são peças tubulares adaptadas aos orifícios. 
+
+Para ser cosiderado um bocal, o seu comprimento deve estar compreendido entre 2 e 3 vezes a dimensão do orifício. 
+
+Diversas configurações de bocais são possíveis.
+
+A principal diferença dos bocais em relação aos orifícios está no coeficiente de descarga do bocal, que assume valores diferentes, frequentemente maiores, que o Cd do orifício.]
+
+
+.pull-right[
+```{r}
+#| echo: false
+#| out.width: 50%
+#| out.height: 50%
+#| fig.cap: "Bocal exterior: Cd=0,81 (superior esquerdo). Bocal interno ou reentrante: Cd=0,51 (superior direito). Bocal convergente 13°30’: Cd=0,94 (inferior esquerdo). Bocal divergente (inferior direito)"
+
+knitr::include_graphics("https://hidraulica.tolentino.pro.br/images/5_bocais.png")
+```
+]
+
+
+---
+
+
+# Escoamento com nível variável
+
+Se o nível não for mantido constante, a altura “h” irá diminuir com o tempo em consequência da própria vazão pelo orifício ou bocal. 
+
+Com a redução da carga hidráulica, a vazão tambem irá decrescer.
+
+O problema que se apresenta na prática é determinar o tempo necessário para o esvaziamento de um recipiente ou reservatório.
+
+Para reservatórios com área constante (por exemplo, prisma, cilindro, paralelepípedo, etc.), o tempo de esvaziamento será:
+
+$$
+ t = \frac{2 \cdot A_r}{C_d \cdot A_o \cdot \sqrt{2 \cdot g}}\cdot (\sqrt{h_1}-\sqrt{h_2})
+$$
+
+em que:
+
+* Ar é a área do reservatório.
+* Ao é a área do orifício.
+* h1 é a altura inicial da água no reservatório.
+* h2 é a altura final da água no reservatório.
+
+
+---
+
+# Exemplo
+
+Considere um reservatório cilíndrico de 1,7 m de altura e 2,3 m de diâmetro com um bocal (Cd = 0,81) de 75 mm de diâmetro instalado no fundo deste reservatório.
+
+a. Qual o tempo necessário para esvaziar metade do reservatório?
+
+b. Qual o tempo necessário para o esvaziamento completo?
+
+???
+
+(a) Pela equação \@ref(eq:esvazia)
+
+$t = \frac{(2 \cdot \pi \cdot 2,3^2/4)}{(0,81 \cdot \pi \cdot 0,075^2/4 \cdot \sqrt{19,62})}\cdot (\sqrt{1,7}-\sqrt{0,85}) = 200 s = 3,3 min$
+
+(b) Pela equação \@ref(eq:esvazia0)
+
+$t = \frac{(2 \cdot \pi \cdot 2,3^2/4)}{(0,81 \cdot \pi \cdot 0,075^2/4 \cdot \sqrt{19,62})}\cdot \sqrt{1,7} = 683 s = 11,4 min$

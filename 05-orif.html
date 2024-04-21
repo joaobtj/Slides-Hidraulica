@@ -24,7 +24,7 @@ body {
 
 # Hidráulica Agrícola
 
-## Condutos Livres
+## Escoamento em orifícios
 
 
 ---
@@ -35,205 +35,197 @@ background-size: 100% 100%
 ---
 
 
-# Condutos Livres
+# Orifícios
 
-O escoamento da água em um conduto livre ou canal tem como característica principal o fato dele apresentar uma superfície livre, sobre a qual atua a pressão atmosférica. 
+Orifícios são perfurações de forma geométrica bem definida feitos abaixo da superfície livre do líquido em paredes de reservatórios.
 
-Rios, canais, drenos e calhas são exemplos típicos de condutos livres de seção aberta. 
-
-Os tubos, embora sejam condutos de seção fechada, também funcionam como condutos livres quando estão operando parcialmente cheios, como é o caso de galerias pluviais e dos bueiros.
-
----
+&lt;img src="https://hidraulica.tolentino.pro.br/images/5_orificio.png" width="40%" height="40%" /&gt;
 
 
-# Elementos geométricos de um canal
-
-.pull-left[
-
-* y - profundidade de escoamento
-* b - largura do fundo do canal
-* α – inclinação do talude
-* m – cotangente do ângulo α
-]
-
-.pull-right[
-
-&lt;img src="image/canal.jpg" height="200px" /&gt;
-]
 
 
 ---
 
-# Elementos geométricos de um canal
+# Orifícios
 
-.pull-left[
-* Seção molhada (A): é a parte da seção transversal do canal que é totalmente ocupada pela água.
-* Perímetro molhado (P): corresponde a soma dos comprimentos relativos ao fundo e aos taludes do canal que estão em contato direto com a água.
-* Raio hidráulico (RH): é a razão entre a seção molhada e o perímetro molhado do canal. O raio hidráulico é a dimensão característica dos canais abertos, assim como o diâmetro interno dos tubos o é para os condutos forçados.
+Podem ser classificados quanto à dimensão relativa:
 
+* Pequenos: menores que 1/10 da profundidade.
+* Grandes: maiores que 1/10 da profundidade.
 
-]
-
-.pull-right[
-
-&lt;img src="image/canal.jpg" height="200px" /&gt;
-]
-
-
----
- 
-# Formas geométricas mais utilizadas em canais
-
-## Trapezoidal
-
-
-.pull-left[
-&lt;img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Trapezoidal_artificial_water_channel.png" height="150px" /&gt;
-]
-
-.pull-right[
-É um formato bstante popular pela sua eficiência, pela relação entre área molhada e perímetro molhada ser grande e pelos seus taludes serem adequados para construção de canais em terra, uma vez que seus ângulos podem ser ajustados para terem estabilidade
-
-* Seção molhada
-`\(A=y \cdot (b+m \cdot y)\)`
-
-* Perímetro molhado
-`\(P=b+2 \cdot y \cdot \sqrt{1+m^2}\)`
-
-]
----
-# Formas geométricas mais utilizadas em canais
-
-## Retangular
-
-
-.pull-left[
-
-&lt;img src="http://raimondi.com.br/wp-content/uploads/2017/03/WhatsApp-Image-2021-05-15-at-09.38.37.jpeg" height="150px" /&gt;
-
-
-]
-
-.pull-right[
-É um caso especial de um canal trapezoidal no qual o ângulo de inclinação dos taludes é 90°. Os canais de concreto armado são construídos com seção de escoamento retangular.
-
-* Seção molhada
-`\(A=y \cdot b\)`
-
-* Perímetro molhado
-`\(P=b+2 \cdot y\)`
-]
----
-
-# Formas geométricas mais utilizadas em canais
-
-## Triangular
-
-
-.pull-left[
-
-&lt;img src="image/triangular.png" height="150px" /&gt;
-
-]
-
-.pull-right[
-
-Também é um caso especial do canal trapezoidal no qual a largura do fundo do canal é nula (b=0).  Os sulcos de infiltração geralmente são abertos com seção triangular.
-
-* Seção molhada
-`\(A=m \cdot y^2\)`𝐴=𝑚𝑦^2
-
-* Perímetro molhado
-`\(P=2 \cdot y\cdot \sqrt{1+m^2}\)`
-
-]
----
-
-# Fórmula de Manning
-
-É utilizada para dimensionamento de canais em escoamento permanente uniforme, sendo escrita como:
-
-`\(Q = \frac{1}{n} \cdot A \cdot Rh^{2/3} \cdot i^{1/2}\)`
-
-
-* Q – vazão de escoamento, m&lt;sup&gt;3&lt;/sup&gt;/s
-* n – coeficiente de rugosidade de Manning
-* A – área molhada, m&lt;sup&gt;2&lt;/sup&gt;
-* Rh - raio hidráulico, m
-* i – declividade da linha de energia, m/m
+No caso de orifícios pequenos, podemos admitir sem grande erros, que todas as partículas atravessam o orifício com a mesma velocidade, ou seja, a velocidade na parte superior e inferior são aproximadamente iguais.
 
 ---
 
+# Coeficiente de descarga
 
-![](image/manning.jpg)
+O jato de água que sai de um orifício ou bocal chama-se veia líquida.
+
+*Coeficiente de contração (Cc)*: os filetes líquidos continuam a convergir depois de passarem pelo orifício até uma seção contraída menor que a área do orifício.
+
+*Coeficiente de redução de velocidade (Cv)*: leva em conta as perdas existente, de modo que a velocidade real é sempre menor que a velocidade teórica.
+
+*Coefiente de descarga (Cd)*: produto dos coeficentes de contração e redução da velocidade:
+
+$$
+C_d = C_c \cdot C_v
+$$
+
+
+---
+
+# Teorema de Torricelli
+
+Aplicando o teorema de Bernoulli ao fluxo através de um pequeno orifício e tomando-se o eixo do orifício como referência: 
+
+--
+
+$$
+V = \sqrt{2 \cdot g \cdot h}
+$$
+
+Aplicando o Coeficiente de redução de velocidade (Cv):
+
+$$
+V = C_v \cdot \sqrt{2 \cdot g \cdot h}
+$$
+---
+
+# Orifícios pequenos em paredes delgadas
+
+Em seu escoamento, podemos considerar que todas as partículas do fluido atravessam o orifício com a mesma velocidade.
+
+`\(C_v = 0,985\)`
+
+`\(C_c = 0,62\)`
+
+`\(C_d = 0,61\)`
+
+A equação da vazão fica:
+
+$$
+Q = C_d \cdot A \cdot \sqrt{2 \cdot g \cdot h}
+$$
 
 ---
 
 # Exemplo
 
-Determinar a vazão de um canal trapezoidal com as seguintes características: 
-
-* Inclinação dos taludes: 1(vertical):1,5(horizontal)
-* Declividade do canal: 1 m em 1500 m
-* Largura do fundo (b): 3,5 m
-* Profundidade de escoamento (y): 1,2 m
-
-Considerar duas situações: 
-
-a) canal de paredes de terra reto, limpo e uniforme; 
-
-b) canal com paredes revestidas de concreto bem acabado.
+Um orifício em parede delgada com 10 cm de diâmetro está instalado na parede de um grande reservatório. A altura da água acima do centro do orifício é de 5 m. Qual a velocidade média da água e a vazão do orifício?
 
 ???
-𝐴=𝑦(𝑏+𝑚𝑦)=1,2(3,5+1,5∙1,2)=6,36𝑚^2 
-𝑃=𝑏+2𝑦√(1+𝑚^2 )=3,5+2∙1,2√(1+〖1,5〗^2 )=7,83𝑚 
-𝑅ℎ=𝐴∕〖𝑃=6,36∕〖7,83=0,81𝑚〗〗   
-a) 𝑄=1/𝑛∙𝐴∙〖𝑅ℎ〗^(2⁄3)∙𝑖^(1⁄2) =1/0,018∙6,36∙〖0,81〗^(2⁄3)∙(1∕1500)^(1⁄2)=7,93𝑚^3/𝑠
-b) 𝑄=1/𝑛∙𝐴∙〖𝑅ℎ〗^(2⁄3)∙𝑖^(1⁄2) =1/0,013∙6,36∙〖0,81〗^(2⁄3)∙(1∕1500)^(1⁄2)=10,97𝑚^3/𝑠
+
+Pela equação \@ref(eq:tor2):
+  
+`\(V = 0,985 \cdot \sqrt{19,62 \cdot 5} = 9,76 m/s\)`
+  
+Pela equação \@ref(eq:orif-pq):
+  
+`\(Q = 0,61 \cdot \frac{\pi \cdot 0,10^2} {4} \sqrt{19,62 \cdot 5} = 45,5 L/s\)`
+
+---
+
+# Orifício de grandes dimensões
+
+Neste caso, não podemos admitir que todas as partículas possuem a mesma velocidade.
+
+A diferença na carga hidráulica em toda a área do orifício não pode ser desprezada. 
+
+&lt;img src="https://hidraulica.tolentino.pro.br/images/5_orificio_grande.png" width="40%" height="40%" /&gt;
 
 
-#
+
+
+--
+.pull-left[
+Logo, devemos usar a integral da equação em função da altura “h”.
+
+$$
+Q = \frac{2}{3} \cdot Cd \cdot L \cdot \sqrt{2 \cdot g} \cdot (h_2^{3/2} - h_1^{3/2})
+`$$]
+
+
+.pull-right[
+em que:
+
+* L é a largura do orifício.
+* h1 é altura da água acima da base superior do orifício.
+* h2 é altura da água acima da base inferior do orifício.]
 ---
 
 # Exemplo
 
-Determinar a declividade que deve ser dada a um canal para atender as seguintes condições de um projeto: 
-
-* Vazão (Q): 2,0 m3/s
-* Profundidade de escoamento (y): 0,80 m
-* Largura do fundo (b): 2,0 m
-* Paredes revestidas de concreto bem acabado
+Um orifício retangular com 60 cm de altura e 75 cm de largura está instalado em um grande reservatório. A altura da água acima do centro do orifício é de 50 cm. Qual a vazão do orifício?
 
 ???
-𝐴=𝑦𝑏=0,8∙2=1,6𝑚^2 
-𝑃=𝑏+2𝑦=2+2∙0,8=3,6𝑚 
-𝑅ℎ=𝐴∕〖𝑃=1,6∕〖3,6=0,44𝑚〗〗   
-𝑄=1/𝑛∙𝐴∙〖𝑅ℎ〗^(2⁄3)∙𝑖^(1⁄2)→2=1/0,013∙1,6∙〖0,44〗^(2⁄3)∙𝑖^(1⁄2)→𝑖=0,000789𝑚/𝑚 
+
+`\(Q = \frac{2}{3} \cdot 0,61 \cdot 0,75 \cdot \sqrt{19,62} \cdot (0,8^{3/2} - 0,2^{3/2}) = 0,85 m^3/s\)`
+
+---
+
+# Bocais
+
+.pull-left[Bocais são peças tubulares adaptadas aos orifícios. 
+
+Para ser cosiderado um bocal, o seu comprimento deve estar compreendido entre 2 e 3 vezes a dimensão do orifício. 
+
+Diversas configurações de bocais são possíveis.
+
+A principal diferença dos bocais em relação aos orifícios está no coeficiente de descarga do bocal, que assume valores diferentes, frequentemente maiores, que o Cd do orifício.]
+
+
+.pull-right[
+&lt;div class="figure"&gt;
+&lt;img src="https://hidraulica.tolentino.pro.br/images/5_bocais.png" alt="Bocal exterior: Cd=0,81 (superior esquerdo). Bocal interno ou reentrante: Cd=0,51 (superior direito). Bocal convergente 13°30’: Cd=0,94 (inferior esquerdo). Bocal divergente (inferior direito)" width="50%" height="50%" /&gt;
+&lt;p class="caption"&gt;Bocal exterior: Cd=0,81 (superior esquerdo). Bocal interno ou reentrante: Cd=0,51 (superior direito). Bocal convergente 13°30’: Cd=0,94 (inferior esquerdo). Bocal divergente (inferior direito)&lt;/p&gt;
+&lt;/div&gt;
+]
 
 
 ---
 
-# Exemplo 
 
-Um canal escavado em terra com seção trapezoidal tem coeficiente de rugosidade n=0,020. Determinar sua profundidade de escoamento (y) considerando-se as seguintes condições de projeto:
+# Escoamento com nível variável
 
-* Vazão (Q): 6,5 m3/s
-* Largura do fundo (b): 4,0 m
-* Inclinação dos taludes: 1:1,5
-* Declividade (i): 0,65%
+Se o nível não for mantido constante, a altura “h” irá diminuir com o tempo em consequência da própria vazão pelo orifício ou bocal. 
+
+Com a redução da carga hidráulica, a vazão tambem irá decrescer.
+
+O problema que se apresenta na prática é determinar o tempo necessário para o esvaziamento de um recipiente ou reservatório.
+
+Para reservatórios com área constante (por exemplo, prisma, cilindro, paralelepípedo, etc.), o tempo de esvaziamento será:
+
+$$
+ t = \frac{2 \cdot A_r}{C_d \cdot A_o \cdot \sqrt{2 \cdot g}}\cdot (\sqrt{h_1}-\sqrt{h_2})
+$$
+
+em que:
+
+* Ar é a área do reservatório.
+* Ao é a área do orifício.
+* h1 é a altura inicial da água no reservatório.
+* h2 é a altura final da água no reservatório.
+
+
+---
+
+# Exemplo
+
+Considere um reservatório cilíndrico de 1,7 m de altura e 2,3 m de diâmetro com um bocal (Cd = 0,81) de 75 mm de diâmetro instalado no fundo deste reservatório.
+
+a. Qual o tempo necessário para esvaziar metade do reservatório?
+
+b. Qual o tempo necessário para o esvaziamento completo?
 
 ???
-tentativas	y (m)	A (m2)	P (m)	RH (m)	Q (m3/s)	
-	1,0	5,5	7,61	0,723	17,90	↓
-	0,3	1,34	5,08	0,263	2,23	↑
-	0,6	2,94	6,16	0,477	7,27	↓
-	0,5	2,38	5,80	0,409	5,31	↑
-	0,562	2,72	6,03	0,452	6,50	ok
 
+(a) Pela equação \@ref(eq:esvazia)
 
+`\(t = \frac{(2 \cdot \pi \cdot 2,3^2/4)}{(0,81 \cdot \pi \cdot 0,075^2/4 \cdot \sqrt{19,62})}\cdot (\sqrt{1,7}-\sqrt{0,85}) = 200 s = 3,3 min\)`
 
+(b) Pela equação \@ref(eq:esvazia0)
 
-
+`\(t = \frac{(2 \cdot \pi \cdot 2,3^2/4)}{(0,81 \cdot \pi \cdot 0,075^2/4 \cdot \sqrt{19,62})}\cdot \sqrt{1,7} = 683 s = 11,4 min\)`
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
